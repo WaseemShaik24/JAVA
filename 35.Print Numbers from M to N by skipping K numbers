@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class PrintNumbersSkipping {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int m = s.nextInt();
+        int n = s.nextInt();
+        int k = s.nextInt();
+        for (int i = m; i <= n; i += k + 1) {
+            System.out.print(i);
+            if (i + k + 1 <= n) {
+                System.out.print(", ");
+            }
+        }
+    }
+}
