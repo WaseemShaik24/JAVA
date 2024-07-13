@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int[] a = Arrays.stream(s.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
+        int ms = a[0], cs = a[0];
+        for (int i = 1; i < a.length; i++) {
+            cs = Math.max(a[i], cs + a[i]);
+            ms = Math.max(ms, cs);
+        }
+        System.out.println(ms);
+    }
+}
