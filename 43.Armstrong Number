@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the Number:");
+        int n = s.nextInt(), t = n, r, sum = 0;
+        while (t != 0) {
+            r = t % 10;
+            sum += r * r * r;
+            t /= 10;
+        }
+        if (sum == n) System.out.println("Armstrong number");
+        else System.out.println("Not an Armstrong number");
+    }
+}
+
