@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int[] a = Arrays.stream(s.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
+        int[] r = new int[a.length];
+        for (int i = 0, j = 0; i < a.length && j < r.length; i++, j++) {
+            r[j] = a[i];
+            if (a[i] == 0 && j + 1 < r.length) {
+                r[++j] = 0;
+            }
+        }
+        System.out.println(Arrays.toString(r));
+    }
+}
