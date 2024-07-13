@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int[] a = Arrays.stream(s.nextLine().split(",")).mapToInt(Integer::parseInt).toArray();
+        int n = a.length;
+        int ts = n * (n + 1) / 2;
+        int sum = 0;
+        for (int x : a) {
+            sum += x;
+        }
+        System.out.println(ts - sum);
+    }
+}
+
