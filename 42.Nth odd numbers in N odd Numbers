@@ -7,6 +7,8 @@ public class Main {
         for (int i = 1, c = 0; c < n; i += 2, c++) {
             System.out.print(i + " ");
         }
+        
+        int nthOdd = 2 * n - 1;
+        System.out.println("\nThe nth odd number after the first " + n + " odd numbers is: " + nthOdd);
     }
 }
-
